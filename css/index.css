@@ -2,3 +2,23 @@
 html,body{
     font-family: 'Work Sans', sans-serif;
 }
+
+/* HEADER */
+.header__top{
+    background-color: #ff4f81;
+    font-size: 14px;
+}
+.header__top a{
+    text-decoration: none;
+}
+.header__right a{
+    color: white;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border: 1px solid black;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+}
+
