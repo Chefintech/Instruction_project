@@ -1,17 +1,44 @@
 /* GLOBAL */
-html,body{
+html, body {
     font-family: 'Work Sans', sans-serif;
 }
+.heading{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.heading h2{ 
+    font-size: 40px;
+    color: #ff4f81;
+    letter-spacing: 0.5px;
+    font-weight: bold;
 
+}
+.heading p{
+    font-size: 17px;
+    letter-spacing: 4px;
+    text-transform: capitalize;
+    color: black;
+}
+.heading p::after{
+    content: '';
+    width: 70px;
+    height: 2px;
+    background-color: black;
+    display: block;
+}
 /* HEADER */
-.header__top{
+.header__top {
     background-color: #ff4f81;
     font-size: 14px;
 }
-.header__top a{
+
+.header__top a {
     text-decoration: none;
+    color: white;
+    transition: all 0.5;
 }
-.header__right a{
+
+.header__right a {
     color: white;
     width: 30px;
     height: 30px;
@@ -20,5 +47,120 @@ html,body{
     display: inline-block;
     text-align: center;
     line-height: 30px;
+    margin-left: 0.25rem;
+}
+.header__right a:hover{
+    background-color: #ff4f81;
+    border-color: white;
+}
+.header__left a:hover {
+    color: #000 !important;
 }
 
+/* .navInstruction{
+    text-align: center;
+} */
+.navInstruction a {
+    color: black;
+    text-align: center;
+}
+
+.navInstruction .navbar-brand p:first-child {
+    font-size: 36px;
+}
+
+.navInstruction .navbar-brand p:first-child i {
+    transform: skewX(-10deg);
+}
+
+.navInstruction .navbar-brand p:last-child {
+    font-size: 11px;
+    color: #ff4f81;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+#navbarInstruction .nav-item {
+    margin: 0 15px;
+}
+
+#navbarInstruction .nav-item::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #ff4f81;
+    display: block;
+    transition: all 0.5s;
+}
+
+#navbarInstruction .nav-item:hover::after {
+    width: 100%;
+
+}
+
+#navbarInstruction .nav-link {
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: all 0.5s;
+}
+
+#navbarInstruction .nav-item:hover .nav-link {
+    color: #ff4f81;
+}
+
+#navbarInstruction .nav-item.active .nav-link {
+    color: #ff4f81;
+}
+
+#navbarInstruction .nav-item.active::after {
+    width: 100%;
+    color: #ff4f81;
+}
+
+#navbarInstruction .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.61);
+    border: 1px solid rgba(0, 0, 0, 0.61);
+}
+
+#navbarInstruction .dropdown-item {
+    color: white;
+    transition: all 0.5s;
+}
+
+#navbarInstruction .dropdown-item:focus, #navbarInstruction .dropdown-item:hover {
+    color: #ff4f81;
+    background-color: transparent;
+}
+/* CAROUSEL */
+#carouselCyber .carousel-caption{
+    /* chi ap dung voi the co position absolute */
+    top: 56%;
+    left: 50%;
+
+    transform: translate(-50% ,-50%);
+}
+#carouselCyber .carousel-caption h1{
+    font-size: 52px;
+}
+#carouselCyber .carousel-caption p{
+    letter-spacing: 4px;
+    line-height: 1.8rem;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+#carouselCyber .carousel-caption button{
+    padding: 11px 20px;
+    color: white;
+    border: white solid 1px;
+    border-radius: 0;
+    letter-spacing: 2px;
+    font-size: 14px;
+    transition: all 0.5s;
+}
+#carouselCyber .carousel-caption button:hover{
+    background-color: #ff4f81;
+    border-color: #ff4f81;
+}
+/* WELCOME */
