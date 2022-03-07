@@ -83,10 +83,12 @@ html, body {
 
 .navInstruction .navbar-brand p:first-child {
     font-size: 36px;
+    font-weight: bold;
 }
 
 .navInstruction .navbar-brand p:first-child i {
     transform: skewX(-10deg);
+
 }
 
 .navInstruction .navbar-brand p:last-child {
@@ -144,6 +146,13 @@ html, body {
     transition: all 0.5s;
 }
 
+.navInstruction .navbar-toggler {
+    color: #ff4f81;
+    background-color: black;
+    border-radius: 0;
+
+}
+
 #navbarInstruction .dropdown-item:focus, #navbarInstruction .dropdown-item:hover {
     color: #ff4f81;
     background-color: transparent;
@@ -164,7 +173,7 @@ html, body {
 
 #carouselCyber .carousel-caption p {
     letter-spacing: 4px;
-    line-height: 1.8rem;
+    line-height: 1.8em;
     width: 70%;
     margin: 0 auto;
     margin-bottom: 25px;
@@ -183,6 +192,10 @@ html, body {
 #carouselCyber .carousel-caption button:hover {
     background-color: #ff4f81;
     border-color: #ff4f81;
+}
+
+#carouselCyber .carousel-control-next, #carouselCyber .carousel-control-prev {
+    z-index: 11;
 }
 
 /* WELCOME */
@@ -298,7 +311,9 @@ html, body {
     background-size: cover;
     background-position: center;
 }
-
+.feedback__top{
+    height: 25vh;
+}
 .feedback__content {
     box-shadow: 0px 1px 7px #8e8e8e;
     background-color: rgba(0, 0, 0, 0.47);
@@ -426,32 +441,38 @@ html, body {
 #cyberModal .modal-dialog {
     max-width: 600px;
 }
+
 /* FOOTER */
-footer{
+footer {
     background-color: #141415;
 }
 
-.footer__top h3{
+.footer__top h3 {
     font-size: 24px;
     font-weight: bold;
     color: #ff4f81;
     letter-spacing: 1px;
     margin-bottom: 1.5rem;
 }
-.footer__top p{
+
+.footer__top p {
     color: #8b8b96;
     font-size: 15px;
     line-height: 2rem;
     letter-spacing: 1px;
 }
-.footer__link,.footer__contact{
+
+.footer__link, .footer__contact {
     margin-bottom: 1rem;
+    display: flex;
 }
-.footer__link i{
+
+.footer__link i {
     color: #ff4f81;
     margin-right: 1rem;
 }
-.footer__link a,.footer__contact a{
+
+.footer__link a, .footer__contact a {
     color: #8b8b96;
     text-decoration: none;
     font-size: 15px;
@@ -459,10 +480,12 @@ footer{
     letter-spacing: 1px;
     transition: all 0.5s;
 }
-.footer__link a:hover,.footer__contact a:hover{
+
+.footer__link a:hover, .footer__contact a:hover {
     color: white;
 }
-.footer__contact i{
+
+.footer__contact i {
     width: 32px;
     height: 32px;
     border: 1px solid #8e8e8e;
@@ -471,23 +494,27 @@ footer{
     text-align: center;
     margin-right: 1rem;
 }
-.footer__form{
+
+.footer__form {
     margin-top: 3rem;
 }
-.footer__form label{
+
+.footer__form label {
     color: #ff4f81;
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 1px;
 }
-.footer__form input{
+
+.footer__form input {
     padding: 14px;
     border-radius: 0;
     border: none;
     color: #888;
     height: auto;
 }
-.footer__form button{
+
+.footer__form button {
     background-color: #ff4f81;
     padding: 12px 35px;
     border-radius: 0;
@@ -496,23 +523,160 @@ footer{
     outline: none;
     transition: all 0.5s;
 }
-.footer__form button:hover{
+
+.footer__form button:hover {
     background-color: #ec1995;
     color: white;
 }
-.footer__bottom{
+
+.footer__bottom {
     color: white;
     background-color: #0f0f10;
     text-align: center;
     letter-spacing: 1px;
     padding: 1rem 0;
 }
-.footer__bottom a{
+
+.footer__bottom a {
     text-decoration: none;
     color: #ff4f81;
     transition: all 0.5s;
     transform: tr;
 }
-.footer__bottom a:hover{
+
+.footer__bottom a:hover {
     color: white;
+}
+
+/* ******************RESPONSIVE******************* */
+
+@media screen and (max-width:1199.98px) {
+
+    /* CAROUSEL */
+    #carouselCyber .carousel-caption {
+        top: 50%;
+    }
+
+    #carouselCyber .carousel-caption h1 {
+        font-size: 4vw;
+    }
+
+    #carouselCyber .carousel-caption p {
+        font-size: 1.6vw;
+        margin-bottom: 0.5em;
+    }
+
+    #carouselCyber .carousel-caption button {
+        font-size: 1.5vw;
+        padding: 0.8em 1em;
+    }
+}
+
+@media screen and (max-width:991.98px) {
+    .navInstruction .navbar-brand p:first-child {
+        font-size: 3vw;
+    }
+
+    .navInstruction .navbar-brand p:last-child {
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    /* HEADER */
+    #navbarInstruction .navbar-nav {
+        background-color: #eee;
+    }
+
+    #navbarInstruction .dropdown-menu {
+        background-color: #e0e1e2;
+        border-color: #e0e1e2;
+    }
+
+    #navbarInstruction .dropdown-item {
+        color: black;
+    }
+}
+
+@media screen and (max-width:575.98px) {
+    /* GLOBAL */
+    .heading p{
+        padding: 0 15px;
+    }
+    /* HEADER */
+    .header__left a {
+        display: block;
+    }
+    .footer__form input,.footer__form button{
+        font-size: 14px;
+        border: 0;
+        padding: 10px;
+
+    }
+    
+
+}
+
+@media screen and (max-width:527px) {
+
+    /* CAROUSEL */
+    #carouselCyber .carousel-caption {
+        top: 45%;
+    }
+}
+
+@media screen and (max-width:415px) {
+
+    /* CAROUSEL */
+    #carouselCyber {
+        height: 250px;
+    }
+
+    #carouselCyber .carousel-inner, #carouselCyber .carousel-item, #carouselCyber .carousel-img {
+        height: 100%;
+    }
+
+    #carouselCyber .carousel-img {
+        object-fit: cover;
+    }
+}
+@media screen and (max-width:376px) {
+
+    .feedback__bottom{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:320px) {
+
+    /* HEADER */
+    .header__right {
+        width: 35%;
+        text-align: center;
+    }
+
+    .header__right a {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+
+    /* HEADER */
+    #navbarInstruction .nav-item {
+        margin: 0;
+        padding: 0 2px;
+    }
+
+    #navbarInstruction .nav-link {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
+@media screen and (min-width:575.98px) and (max-width:992px) {
+    .feedback__bottom {
+        width: 85%;
+    }
 }
